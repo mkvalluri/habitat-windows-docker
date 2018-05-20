@@ -1,2 +1,6 @@
-# habitat-windows-docker
-Docker file to run windows service through habitat
+# Habitat Windows Docker Image
+
+Docker file to install habitat packages which contains .NET services.
+
+
+Author: Murali Valluri (mvalluri.pub@gmail.com)
