@@ -12,6 +12,9 @@ RUN Add-WindowsFeature Web-Server; `
 	Remove-WebSite -Name 'Default Web Site' ; `
     Invoke-WebRequest -Uri https://dotnetbinaries.blob.core.windows.net/servicemonitor/2.0.1.3/ServiceMonitor.exe -OutFile C:\ServiceMonitor.exe
 
+# Install xWebAdministration
+RUN Install-PackageProvider -Name NuGet -Force | Out-Null; `
+    Install-Module xWebAdministration -Force | Out-Null ;
 
 # Download Habitat CLI and setup path
 RUN Invoke-WebRequest https://api.bintray.com/content/habitat/stable/windows/x86_64/hab-%24latest-x86_64-windows.zip?bt_package=hab-x86_64-windows -OutFile c:\hab-cli.zip ; `	
