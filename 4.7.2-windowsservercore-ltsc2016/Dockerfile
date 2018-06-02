@@ -14,4 +14,4 @@ RUN Invoke-WebRequest https://api.bintray.com/content/habitat/stable/windows/x86
 # Setup Habitat Supervisor
 RUN hab pkg install core/windows-service; `
     hab pkg exec core/windows-service install; `
-    hab pkg install core/hab-sup/0.55.0; 
+    hab pkg install core/hab-sup/0.56.0; 
